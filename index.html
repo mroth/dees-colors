@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>dee's colors</title>
+	<style type="text/css" media="screen">
+		body { 
+			font-family: Helvetica, Arial, sans-serif; 
+			color: #999;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		a { 
+			color: #63B9FE; 
+			text-decoration: none;
+		}
+		#program {	
+			margin-left: 40px;
+			margin-right: 40px; 
+		}
+		#program input {
+			color: #666;
+			background-color: #fff;
+		} 
+		#r {
+			margin-top: 40px;
+			font-size: 4em;
+			font-style: bolder;
+		}
+		.a { color: #CC0000; }
+		.b { color: #000000; }
+		.c { color: #FCB1C1; }
+		.d { color: #01C6C8; }
+		.e { color: #92C2FC; }
+		.f { color: #955229; }
+		.g { color: #6200A0; }
+		.h { color: #5C3016; }
+		.i { color: #FED101; }
+		.j { color: #5145AA; }		
+		.k { color: #0172FE; }
+		.l { color: #58CC35; }
+		.m { color: #6D1846; }
+		.n { color: #F86A01; }
+		.o { color: #FCFB8C; }
+		.p { color: #317101; }
+		.q { color: #01166F; }
+		.r { color: #FE0101; }
+		.s { color: #FE01CB; }
+		.t { color: #FC8F2D; }
+		.u { color: #F7C003; }
+		.v { color: #B7ED25; }
+		.w { color: #021F8C; }
+		.x { color: #A1A1A2; }
+		.y { color: #A80101; }
+		.z { color: #FF9933; }
+	</style>
+</head>
+<body onload="flip();document.f.original.focus()">
+	<h1>dee's colors</h1>
+	<p>intrigued while reading <a href="http://www.colourlovers.com/blog/2009/01/06/seeing-colors-grapheme-color-synesthesia">this article about my friend's grapheme-color synesthesia</a>, I wanted to see some more sample words based on <a href="http://flickr.com/photos/badgurl/3082858665/">her color map</a>, so this quick hack was born.  type whatever you want in the box below to see it mapped!</p>
+	
+	<div id="program">
+		<form name="f" action="">
+			<br/><input type="text" size="45" name="original" onkeyup="flip()" value="hello world."/>
+		</form>
+	
+		<div id="r"></div>
+	</div>
+	
+	<br/><br/><p>
+	<small>this hack thrown together by <a href="http://mroth.info">matthew rothenberg</a>.  share and enjoy!</small>
+	<br/><a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/us/80x15.png" /></a>
+	</p>
+
+<script type="text/javascript">
+<!--
+function flip() {
+	var result = flipString(document.f.original.value);
+	document.getElementById("r").innerHTML = result;
+}
+function flipString(text) {
+	var result = "";
+	for (var i in text) {
+		var c = text.charAt(i)
+		result += "<span class=\'" + c.toLowerCase() + "\'>" + c + "</span>"
+	}
+	result += "&nbsp;"; //extra space at the end to keep the div from collapsing when field is blank
+	return result;
+}
+-->
+</script>
+<!-- google tracking fun! -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-52956-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
