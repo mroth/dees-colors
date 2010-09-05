@@ -74,21 +74,24 @@
 	</p>
 
 <script type="text/javascript">
-<!--
+
 function flip() {
 	var result = flipString(document.f.original.value);
 	document.getElementById("r").innerHTML = result;
 }
 function flipString(text) {
-	var result = "";
-	for (var i in text) {
-		var c = text.charAt(i)
-		result += "<span class=\'" + c.toLowerCase() + "\'>" + c + "</span>"
+	var result     = ""
+	    text_array = text.split('');
+	
+	for (var i=0,l=text_array.length;l>i; i++) {
+		var c = text_array[i];
+		if(c) {
+			result += "<span class=\'" + c.toLowerCase() + "\'>" + c + "</span>";
+		}
 	}
 	result += "&nbsp;"; //extra space at the end to keep the div from collapsing when field is blank
 	return result;
 }
--->
 </script>
 <!-- google tracking fun! -->
 <script type="text/javascript">
